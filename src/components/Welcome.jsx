@@ -34,7 +34,7 @@ export default function Welcome() {
   const classes = useStyles();
 
   return (
-    <Grid container spacing={2} className={classes.root}>
+    <Grid container className={classes.root}>
       <Grid item xs={12}>
         <Typography variant="h5" align="center">
           Choose your journey

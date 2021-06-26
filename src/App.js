@@ -1,7 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
 import * as ROUTES from './constants/routes';
 import Header from './components/Header';
 
@@ -26,7 +25,6 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <main>
-          <Container maxWidth="lg" disableGutters>
             <Header />
             <Suspense fallback={<p>Loading...</p>}>
             <Switch>
@@ -34,7 +32,6 @@ function App() {
               <Route path={ROUTES.MONIKA_DASHBOARD} component={Monikapage} />
             </Switch>
             </Suspense>
-          </Container>
         </main>
       </Router>
     </ThemeProvider>

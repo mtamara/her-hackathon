@@ -3,6 +3,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import Carousel from '../components/Carousel';
 import Welcome from '../components/Welcome';
+import DashboardMonika from './DashboardMonika';
 
 export default function StartPage() {
 
@@ -16,7 +17,7 @@ export default function StartPage() {
         handleOpen={handleOpen}
         setHandleOpen={setHandleOpen}
       />
-      {!handleOpen.open && <Welcome /> }
+      {!handleOpen.open && <DashboardMonika /> }
       </>
   );
 }
