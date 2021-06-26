@@ -29,6 +29,9 @@ const useStyles = makeStyles(theme => ({
     fontSize: 24,
     textAlign: 'center',
   },
+  firstGridItem: {
+      justifyContent: 'space-around',
+  }
 }));
 
 export default function DashboardMonika() {
@@ -38,10 +41,13 @@ export default function DashboardMonika() {
       <div className={classes.root}>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={8}>
-            <Grid container direction="row" alignItems="stretch">
+            <Grid container spacing={2} direction="row" alignItems="stretch" className={classes.firstGridItem}>
+                <Grid item xs={12} sm={8}>
               <Paper className={classes.paper} xs={12}>
                 <ChallengesList />
               </Paper>
+              </Grid>
+              <Grid item xs={12} sm={4}>
               <Paper className={classes.paper} xs={12}>
                 <Typography variant="h4" component="h2" color="secondary">
                   Your Points
@@ -53,6 +59,7 @@ export default function DashboardMonika() {
                 </Typography>
                 <Typography variant="h6" color="secondary">+3.000 coming up!</Typography>
               </Paper>
+              </Grid>
             </Grid>
           </Grid>
 
