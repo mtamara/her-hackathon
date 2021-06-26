@@ -1,6 +1,9 @@
+import React, {useState} from 'react';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import './App.css';
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+
 import Header from './components/Header';
+import Carousel from './components/Carousel';
 
 const theme = createMuiTheme({
   palette: {
@@ -14,12 +17,18 @@ const theme = createMuiTheme({
 });
 
 function App() {
+
+  const [handleOpen, setHandleOpen] = useState({ open: true });
+  const matches = useMediaQuery("(max-width:600px)");
+
   return (
     <ThemeProvider theme={theme}>
       <Header />
-        <p>
-          Welcome Team 2
-        </p>
+      <Carousel 
+        isMobile={matches}
+        handleOpen={handleOpen}
+        setHandleOpen={setHandleOpen}
+      />
     </ThemeProvider>
   );
 }
