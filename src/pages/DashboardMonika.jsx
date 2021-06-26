@@ -1,5 +1,4 @@
 import React from 'react';
-import ChallengesList from '../components/ChallengesList';
 import YourChallenge from '../components/YourChallenge';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';

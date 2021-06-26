@@ -137,14 +137,6 @@ export default function PrimarySearchAppBar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
         <IconButton aria-label="show 11 new notifications" color="inherit">
           <Badge badgeContent={11} color="secondary">
             <NotificationsIcon />
@@ -171,7 +163,6 @@ export default function PrimarySearchAppBar() {
       <AppBar position="static">
         <Toolbar>
         <ImageAvatar />
-          
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
           <div className={classes.search}>
@@ -192,11 +183,6 @@ export default function PrimarySearchAppBar() {
               EasyPeasy
             </Typography>
           </RouterLink>
-            <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <MailIcon />
-              </Badge>
-            </IconButton>
             <IconButton aria-label="show 17 new notifications" color="inherit">
               <Badge badgeContent={17} color="secondary">
                 <NotificationsIcon />
