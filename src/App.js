@@ -12,13 +12,17 @@ const theme = createMuiTheme({
       main: '#D83A56',
     },
     secondary: {
-      main: '#9cd8bd',
+      main: '#101010',
     },
   },
 });
 
-const Startpage = lazy(() => import('./pages/StartPage'));
-const Monikapage = lazy(() => import('./pages/DashboardMonika'));
+const StartPage = lazy(() => import('./pages/StartPage'));
+const MonikaPage = lazy(() => import('./pages/DashboardMonika'));
+const MarketplacePage = lazy(() => import('./pages/Marketplace'));
+const CommunityChallengePage = lazy(() => import('./pages/CommunityChallenge'));
+const AchievementsPage = lazy(() => import('./pages/Achievements'));
+const ImpactPage = lazy(() => import('./pages/Impact'));
 
 function App() {
   return (
@@ -28,8 +32,12 @@ function App() {
             <Header />
             <Suspense fallback={<p>Loading...</p>}>
             <Switch>
-              <Route path={ROUTES.STARTPAGE} component={Startpage} exact />
-              <Route path={ROUTES.MONIKA_DASHBOARD} component={Monikapage} />
+              <Route path={ROUTES.STARTPAGE} component={StartPage} exact />
+              <Route path={ROUTES.MONIKA_DASHBOARD} component={MonikaPage} />
+              <Route path={ROUTES.MARKETPLACE} component={MarketplacePage} />
+              <Route path={ROUTES.COMMUNITY_CHALLENGE} component={CommunityChallengePage} />
+              <Route path={ROUTES.ACHIEVEMENTS} component={AchievementsPage} />
+              <Route path={ROUTES.IMPACT} component={ImpactPage} />
             </Switch>
             </Suspense>
         </main>

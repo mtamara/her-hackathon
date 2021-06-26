@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import Carousel from '../components/Carousel';
-import Welcome from '../components/Welcome';
 import DashboardMonika from './DashboardMonika';
 
 export default function StartPage() {
@@ -12,12 +11,12 @@ export default function StartPage() {
 
   return (
       <>
-      <Carousel 
+      {matches && <Carousel 
         isMobile={matches}
         handleOpen={handleOpen}
         setHandleOpen={setHandleOpen}
-      />
-      {!handleOpen.open && <DashboardMonika /> }
+      />}
+      {(!matches || !handleOpen.open) && <DashboardMonika /> }
       </>
   );
 }

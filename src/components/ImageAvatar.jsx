@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -8,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
     },
+    alignItems: 'center',
   },
   small: {
     width: theme.spacing(3),
@@ -25,7 +27,7 @@ export default function ImageAvatar() {
   return (
     <div className={classes.root}>
       <Avatar alt="Remy Sharp" src="/assets/Monika.png" className={classes.large} />
-      <div>Hello Monika!</div>
+      <Typography variant="h6">Hello Monika!</Typography>
     </div>
   );
 }
