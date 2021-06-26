@@ -7,6 +7,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import IconButton from '@material-ui/core/IconButton';
 import { Link as RouterLink } from 'react-router-dom';
 import { STARTPAGE } from '../constants/routes';
+import ImageAvatar from './ImageAvatar';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -31,6 +32,7 @@ export default function Header() {
     <div className={classes.root}>
       <AppBar position="static" >
         <Toolbar className={classes.navbar}>
+          <ImageAvatar />
           <RouterLink to={STARTPAGE}>
             <Typography variant="h6" className={classes.title}>
               EasyPeasy
