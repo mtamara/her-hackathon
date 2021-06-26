@@ -7,6 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import UpcomingEvents from '../components/UpcomingEvents';
+import EcoWarrior from '../components/EcoWarrior';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -30,8 +31,8 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
   },
   firstGridItem: {
-      justifyContent: 'space-around',
-  }
+    justifyContent: 'space-around',
+  },
 }));
 
 export default function DashboardMonika() {
@@ -41,36 +42,46 @@ export default function DashboardMonika() {
       <div className={classes.root}>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={8}>
-            <Grid container spacing={2} direction="row" alignItems="stretch" className={classes.firstGridItem}>
-                <Grid item xs={12} sm={8}>
-              <Paper className={classes.paper} xs={12}>
-                <ChallengesList />
-              </Paper>
+            <Grid
+              container
+              spacing={2}
+              direction="row"
+              alignItems="stretch"
+              className={classes.firstGridItem}
+            >
+              <Grid item xs={12} sm={8}>
+                <Paper className={classes.paper} xs={12}>
+                  <ChallengesList />
+                </Paper>
               </Grid>
               <Grid item xs={12} sm={4}>
-              <Paper className={classes.paper} xs={12}>
-                <Typography variant="h4" component="h2" color="secondary">
-                  Your Points
-                </Typography>
-                <Typography variant="body2" className={classes.points} color="secondary">
-                  <span>5.000</span><br />
-                  <span>green</span><br />
-                  <span>points</span>
-                </Typography>
-                <Typography variant="h6" color="secondary">+3.000 coming up!</Typography>
-              </Paper>
+                <Paper className={classes.paper} xs={12}>
+                  <Typography variant="h4" component="h2" color="secondary">
+                    Your Points
+                  </Typography>
+                  <Typography variant="body2" className={classes.points} color="secondary">
+                    <span>5.000</span>
+                    <br />
+                    <span>green</span>
+                    <br />
+                    <span>points</span>
+                  </Typography>
+                  <Typography variant="h6" color="secondary">
+                    +3.000 coming up!
+                  </Typography>
+                </Paper>
               </Grid>
+              <Grid item xs={12}>
+              <EcoWarrior />
+          </Grid>
             </Grid>
           </Grid>
-
           <Grid item xs={12} sm={4}>
             <Paper className={classes.paper}>
               <UpcomingEvents />
             </Paper>
           </Grid>
-          <Grid item xs={6} sm={3}>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
-          </Grid>
+          
         </Grid>
       </div>
       <YourChallenge />
