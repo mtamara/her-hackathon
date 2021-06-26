@@ -1,6 +1,5 @@
 import React from 'react';
 import ChallengesList from '../components/ChallengesList';
-import Buttons from '../components/Buttons';
 import YourChallenge from '../components/YourChallenge';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -33,6 +32,10 @@ const useStyles = makeStyles(theme => ({
   firstGridItem: {
     justifyContent: 'space-around',
   },
+  pointsItem: {
+    textAlign: 'center',
+    alignSelf: 'center',
+  }
 }));
 
 export default function DashboardMonika() {
@@ -50,15 +53,12 @@ export default function DashboardMonika() {
               className={classes.firstGridItem}
             >
               <Grid item xs={12} sm={8}>
-                <Paper className={classes.paper} xs={12}>
-                  <ChallengesList />
-                </Paper>
+                <YourChallenge />
               </Grid>
-              <Grid item xs={12} sm={4}>
-                <Paper className={classes.paper} xs={12}>
-                  <Typography variant="h4" component="h2" color="secondary">
+              <Grid item xs={12} sm={4} className={classes.pointsItem}>
+                  <Typography component="h2" variant="h5" color="secondary">
                     Your Points
-                  </Typography>
+                  </Typography><br />
                   <Typography variant="body2" className={classes.points} color="secondary">
                     <span>5.000</span>
                     <br />
@@ -69,7 +69,6 @@ export default function DashboardMonika() {
                   <Typography variant="h6" color="secondary">
                     +3.000 coming up!
                   </Typography>
-                </Paper>
               </Grid>
               <Grid item xs={12}>
               <EcoWarrior />
@@ -81,11 +80,9 @@ export default function DashboardMonika() {
               <UpcomingEvents />
             </Paper>
           </Grid>
-          
         </Grid>
       </div>
-      <YourChallenge />
-      <Buttons />
+      
     </>
   );
 }
