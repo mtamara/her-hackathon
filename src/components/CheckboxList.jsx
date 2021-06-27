@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function CheckboxList() {
   const classes = useStyles();
-  const [checked, setChecked] = React.useState([0]);
+  const [checked, setChecked] = React.useState([0, 2, 3]);
 
   const handleToggle = value => () => {
     const currentIndex = checked.indexOf(value);
@@ -45,7 +45,7 @@ export default function CheckboxList() {
           <ListItemIcon>
             <Checkbox
               edge="start"
-              checked={true}
+              checked={checked.indexOf(0) !== -1}
               tabIndex={-1}
               disableRipple
               inputProps={{ 'aria-labelledby': `checkbox-list-label-0` }}
@@ -60,7 +60,7 @@ export default function CheckboxList() {
           <ListItemIcon>
             <Checkbox
               edge="start"
-              checked={true}
+              checked={checked.indexOf(1) !== -1}
               tabIndex={-1}
               disableRipple
               inputProps={{ 'aria-labelledby': `checkbox-list-label-1` }}
@@ -75,7 +75,7 @@ export default function CheckboxList() {
           <ListItemIcon>
             <Checkbox
               edge="start"
-              checked={true}
+              checked={checked.indexOf(2) !== -1}
               tabIndex={-1}
               disableRipple
               inputProps={{ 'aria-labelledby': `checkbox-list-label-2` }}
@@ -90,7 +90,7 @@ export default function CheckboxList() {
           <ListItemIcon>
             <Checkbox
               edge="start"
-              checked={checked.indexOf(2) !== -1}
+              checked={checked.indexOf(3) !== -1}
               tabIndex={-1}
               disableRipple
               inputProps={{ 'aria-labelledby': `checkbox-list-label-3` }}
@@ -98,7 +98,7 @@ export default function CheckboxList() {
           </ListItemIcon>
           <ListItemText
             id={`checkbox-list-label-3`}
-            primary={`Did you throw away food this week?`}
+            primary={`Did you not throw away food this week?`}
           />
         </ListItem>
       </List>

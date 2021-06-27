@@ -63,7 +63,7 @@ const useStyles = makeStyles(theme => ({
   },
   redeemBadge: {
     fontSize: 18,
-    color: theme.palette.common.white,
+    color: theme.palette.common.black,
     backgroundColor: '#C3DFA4',
     padding: '1rem',
     width: '100%',
@@ -154,7 +154,7 @@ export default function Marketplace() {
             </Grid>
           </Grid>
           <br />
-          <Typography variant="h6">Redeem your points</Typography>
+          <Typography variant="h6">Redeem your GREEN POINTS</Typography>
           <Grid container direction="row" alignItems="stretch" className={classes.redeem}>
             <Grid item xs={12} sm={3} className={classes.redeemGridItem}>
               <Badge

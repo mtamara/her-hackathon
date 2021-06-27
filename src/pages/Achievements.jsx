@@ -24,6 +24,10 @@ const useStyles = makeStyles({
   icon: {
     fontSize: 150,
   },
+  link: {
+    color: 'black',
+    textDecoration: 'underline',
+  }
 });
 
 export default function Achievements() {
@@ -43,15 +47,15 @@ export default function Achievements() {
             <LocalActivityIcon className={classes.icon} />
             <Typography variant="h6">
                 You have saved <b>25€</b> shopping in our Marketplace
-            </Typography>
+            </Typography><br />
           </div>
         </Grid>
         <Grid item xs={12} md={4}>
           <div className={classes.achievement}>
             <OpacityIcon className={classes.icon} />
             <Typography variant="h6">
-                Your actions have saved <b>37.389 L</b> of water
-            </Typography><br />
+                Your actions have saved <b>37.389 L</b> of water based on calculations of the veggie calculator <a href="https://vegan.rocks/app/calculator/" className={classes.link}>of vegan rocks</a>
+            </Typography>
           </div>
         </Grid>
         <Grid item xs={12} md={4}>
@@ -59,7 +63,7 @@ export default function Achievements() {
             <WhatshotIcon className={classes.icon} />
             <Typography variant="h6">
                 You have been in your challenge for <b>2 months</b>. Don't give up!
-            </Typography>
+            </Typography><br />
           </div>
         </Grid>
       </Grid>

@@ -106,7 +106,7 @@ export default function CommunityChallengeEvents() {
               color="secondary"
               className={classes.eventDescription}
             >
-              <span className={classes.bold}>Visit a BIO Farm</span>
+              <span className={classes.bold}>Visit an organic Farm</span>
               <br />
               <span>
                 Sign up <a href="/">here</a>
