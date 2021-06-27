@@ -54,7 +54,7 @@ export default function Achievements() {
           <div className={classes.achievement}>
             <OpacityIcon className={classes.icon} />
             <Typography variant="h6">
-                Your actions have saved <b>37.389 L</b> of water based on calculations of the veggie calculator <a href="https://vegan.rocks/app/calculator/" className={classes.link}>of vegan rocks</a>
+                Your actions have saved <b>37.389 L</b> of water based on calculations of the veggie calculator <a href="https://vegan.rocks/app/calculator/" target="_blank" className={classes.link}>of vegan rocks</a>
             </Typography>
           </div>
         </Grid>
