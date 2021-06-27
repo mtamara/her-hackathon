@@ -38,12 +38,12 @@ export default function Inspiration() {
         <Grid item xs={12}>
           <div className={classes.inspirationBox}>
             <Typography variant="h6" color="secondary">
-              - Tips to avoid food waiste -
+              - Tips to avoid food waste -
             </Typography>
             <br />
             <img
               src="/assets/community_challenge_2.jpg"
-              alt="Avoid food waiste"
+              alt="Avoid food waste"
               className={classes.img}
             />
           </div>

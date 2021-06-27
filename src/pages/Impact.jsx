@@ -1,86 +1,107 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
-import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import CheckboxList from '../components/CheckboxList';
+import ImpactHero from '../components/ImpactHero';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
-    padding: '2rem',
+    padding: '1rem',
   },
-  paper: {
-    padding: theme.spacing(2),
+  groupIcon: {
+    fontSize: 44,
+  },
+  events: {
+    marginTop: '1rem',
+    textAlign: 'left',
+  },
+  grid: {
+    marginTop: '1rem',
+  },
+  pastPoints: {
+    backgroundColor: '#989898',
+    width: '60px',
+    padding: '1rem',
+    color: theme.palette.common.white,
+    borderRadius: '10%',
     textAlign: 'center',
-    color: theme.palette.text.secondary,
+    fontWeight: '700',
+    fontSize: 24,
+  },
+  points: {
+    backgroundColor: theme.palette.primary.main,
+    width: '60px',
+    padding: '1rem',
+    color: theme.palette.common.white,
+    borderRadius: '10%',
+    textAlign: 'center',
+    fontWeight: '700',
+    fontSize: 24,
+  },
+  eventDescription: {
+    marginTop: '1rem',
   },
   bold: {
     fontWeight: 600,
-    paddingBottom: '.5rem',
   },
-  lightIconBtn: {
-    backgroundColor: '#FFEAC9',
+  eventsItem: {
+    padding: '2rem !important',
+    [theme.breakpoints.up('md')]: {
+      borderRight: '2px dotted #D83A56',
+    },
   },
-  icon: {
-    fontSize: 60,
+  lastEventsItem: {
+    padding: '2rem !important',
   },
-  points: {
-    backgroundColor: 'white',
-    width: '90px',
-    padding: '1rem',
-    color: theme.palette.common.white,
-    margin: '0.5rem auto',
-    fontWeight: '700',
-    fontSize: 24,
+  otherBox: {
+    padding: '.5rem',
+    backgroundColor: '#C3DFA4',
+    borderRadius: '1rem',
     textAlign: 'center',
-  }
+    marginBottom: '1rem',
+  },
 }));
 
 export default function Impact() {
   const classes = useStyles();
+
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Typography variant="h5" className={classes.bold}>
-          SMALL STEPS - HUGE IMPACT
-        </Typography>
-        <Button className={classes.lightIconBtn}>
-          <ThumbUpAltIcon className={classes.icon} />
-          <Typography variant="h5" className={classes.bold}>
-            IT ONLY TAKES ONE TICK TO MAKE THE WORLD A BIT MORE SUSTAINABLE
+      <Grid container>
+        <Grid item>
+          <ThumbUpAltIcon className={classes.groupIcon} />
+        </Grid>
+        &nbsp;
+        <Typography variant="h6">IT ONLY TAKES ONE TICK TO MAKE THE WORLD A BIT MORE SUSTAINABLE</Typography>
+      </Grid>
+      <Grid container spacing={2} alignItems="stretch">
+        <Grid item xs={12} md={4} className={classes.eventsItem}>
+          <CheckboxList />
+        </Grid>
+        <Grid item xs={12} md={4} className={classes.eventsItem}>
+        <ImpactHero />
+        </Grid>
+        <Grid item xs={12} md={4} className={classes.lastEventsItem}>
+        <Typography variant="h6" color="secondary">
+            Other categories:
           </Typography>
-        </Button>
-        <Grid item xs={5} sm={6} className={classes.points}>
-          <Typography component="h2" variant="h5" color="secondary">
-            Fight Food Waste
-          </Typography>
-          <Typography component="h2" variant="h5" color="secondary">
-          </Typography><br />
-          <CheckboxList>
-
-          </CheckboxList>
+          <br />
+          <div className={classes.otherBox}>
+            <Typography style={{ fontSize: 18 }}>TRANSPORTATION</Typography>
+          </div>
+          <div className={classes.otherBox}>
+            <Typography style={{ fontSize: 18 }}>WASTE</Typography>
+          </div>
+          <div className={classes.otherBox}>
+            <Typography style={{ fontSize: 18 }}>WATER</Typography>
+          </div>
+          <div className={classes.otherBox}>
+            <Typography style={{ fontSize: 18 }}>ENERGY</Typography>
+          </div>
         </Grid>
-        <Grid item xs={12} sm={4}>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-        </Grid>
-        <Grid item xs={3} sm={2}>
-          <Paper className={classes.paper}>xs=12 sm=6</Paper>
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <Paper className={classes.paper}>xs=6 sm=3</Paper>
-        </Grid>
-
       </Grid>
     </div>
   );
 }
-
-
-
-
-
-
-
