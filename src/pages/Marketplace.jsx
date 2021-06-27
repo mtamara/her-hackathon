@@ -190,7 +190,7 @@ export default function Marketplace() {
                 <div className={classes.redeemItem}>
                   <img
                     src="/assets/marketplace_green_credit.png"
-                    alt="DB"
+                    alt="Green Credit"
                     className={classes.redeemImg}
                   />
                   <Typography variant="h6">
@@ -214,7 +214,7 @@ export default function Marketplace() {
                 <div className={classes.redeemItem}>
                   <img
                     src="/assets/marketplace_bio_hotels.png"
-                    alt="DB"
+                    alt="BIO Hotels"
                     className={classes.redeemImg}
                   />
                   <Typography variant="h6">
@@ -237,8 +237,8 @@ export default function Marketplace() {
               >
                 <div className={classes.redeemItem}>
                   <img
-                    src="/assets/marketplace_betterplace.png"
-                    alt="DB"
+                    src="/assets/betterplace.png"
+                    alt="Betterplace"
                     className={classes.redeemImg}
                   />
                   <Typography variant="h6">
